@@ -312,25 +312,37 @@
     /* .header__logo {
     display:flex;
     flex-wrap: nowrap; */
-
   
     a{
       display:flex;
       align-items: center;
       gap: var(--spacing-base);
-      padding: var(--padding-s);
+      /* padding: var(--padding-s); */
+    }
+
+    .logo {
+      padding: 0 1rem;
+    }
+
+    .logo__container {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .header__logo-svg {
       width:3rem;
       height:auto;
+      
+      
       g {
       stroke: var(--clr-accent);
+      line-height: 1.6;
+      
       }
     }
 
     p{
-      width:100%;
+      
       line-height: var(--line-height-s);
       font-weight: var(--fw-600);
     }
@@ -350,6 +362,7 @@
     li>a{
       padding: var(--padding-s);
       font-weight: var(--fw-500);
+      line-height: 1.6;
     }
   }
 }
@@ -429,14 +442,15 @@
 
 .cta {
   display:grid;
-  grid-template-columns: repeat(2, autofit);
-  width:100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-columns: repeat(auto-fit); */
+  width: 100%;
   
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: var(--flow-space-lg) 0;
-  gap: var(--flow-space-lg);
+  /* margin: var(--flow-space-lg) 0; */
+  gap: var(--spacing-base);
 }
 
 .cta__left {
@@ -493,10 +507,11 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  margin: var(--spacing-base) 0;
+  
   aspect-ratio: 1;
-  height: clamp(0.5rem, 100%, 15rem);
-  border-radius: 10rem;
+  height: clamp(5rem, 30vw, 15rem);
+  /* height: clamp(0.5rem, 100%, 15rem); */
+  border-radius: 50%;
   background-color: var(--clr-accent);
   flex: 0 0 auto;
 }
@@ -534,7 +549,7 @@
 }
   .gallery__article {
     
-    
+    border-radius: var(--border-radius);
     background-color: var(--clr-primary-light-1);
     box-shadow: var(--border-shadow);
 
@@ -546,11 +561,14 @@
 
 
   .article__image {
+    
     position:relative;
     display: inline-block;
     width: 100%;
 
     img {
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
       display:block;
       width:100%;
       height:auto;
@@ -657,8 +675,8 @@ h3 {
   .cta__right {
     display:flex;
     flex-direction: column;
-   grid-column: 2/3;
-   gap: var(--spacing-base);
+    grid-column: 2/3;
+    gap: var(--spacing-base);
    
   }
 
@@ -712,6 +730,20 @@ h3 {
     margin-top: var(--spacing-base);
     margin-left:auto;
   }
+
+
+
+/* EVENTS */
+
+a:hover {
+  background-color: var(--clr-accent);
+  color:var(--clr-accent-light-1);
+
+  g {
+  stroke:var(--clr-accent-light-1);
+  }
+}
+
 
 /*==================================================================================================================================================*/
 /*=============================================== UTILITIES LAYER ==================================================================================*/
