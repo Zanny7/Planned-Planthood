@@ -29,6 +29,7 @@
   /* min body height */
   body {
     min-height: 100vh;
+    
   }
 
   /* responsive images/videos */
@@ -433,6 +434,7 @@
   
   justify-content: center;
   align-items: center;
+  align-content: center;
   margin: var(--flow-space-lg) 0;
   gap: var(--flow-space-lg);
 }
@@ -523,7 +525,8 @@
 .gallery__grid {
   
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
   gap:var(--spacing-base);
   
 
@@ -535,10 +538,10 @@
     background-color: var(--clr-primary-light-1);
     box-shadow: var(--border-shadow);
 
-    img {
+    /* img {
       
       width:100%;
-    }
+    } */
   }
 
 
@@ -669,16 +672,61 @@ h3 {
     
   }
 
+
+  /* FOOTER */
+  .bottom__greyBar {
+    min-height:var(--flow-space-lg);
+  }
+
+  .footer__grid {
+    display:grid;
+    margin: var(--flow-space-lg);
+    grid-template-columns: auto;
+    color:var(--clr-accent-light-1);
+    
+
+  }
+
+  .footer__left {
+    grid-column: 1/2;
+    display:flex;
+    flex-direction: column;
+
+    :first-child,
+    :nth-child(2) {
+      margin-bottom: var(--spacing-base);
+    }
+
+    :nth-child(3),
+    :nth-child(4) {
+      font-weight: var(--fw-800);
+    }
+     
+  }
+
+  .footer__right {
+    display:flex;
+    flex-direction: column;
+    gap: var(--flow-space);
+    grid-column: 2/3;
+    margin-top: var(--spacing-base);
+    margin-left:auto;
+  }
+
 /*==================================================================================================================================================*/
 /*=============================================== UTILITIES LAYER ==================================================================================*/
 @layer utilities {
   
   /* background colors for areas of the page */
   .area-color1{
-    background-color: var(--clr-neutral-100);;
+    background-color: var(--clr-accent-light-1);
   }
   .area-color2{
     background-color:var(--clr-neutral-200);
+  }
+
+  .area-color3{
+    background-color: var(--clr-accent);
   }
 
   button {
