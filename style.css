@@ -249,6 +249,8 @@
     
   }
 
+
+
   /* keep the content of the content-grid and fullwidth inside the content container */
   .content-grid>*,
   .fullwidth>* {
@@ -304,7 +306,7 @@
 
 .header__section-1 {
   display:flex;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   justify-content: space-between;
   font-size: var(--fs-500);
@@ -442,7 +444,7 @@
 
 .cta {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 200px));
   /* grid-template-columns: repeat(auto-fit); */
   width: 100%;
   
@@ -451,7 +453,10 @@
   align-content: center;
   /* margin: var(--flow-space-lg) 0; */
   gap: var(--spacing-base);
+  padding: var(--flow-space-lg) 0;
 }
+
+
 
 .cta__left {
 
@@ -481,7 +486,7 @@
     display:flex;
     border: 1px solid var(--clr-primary);
     border-radius: 2rem;
-    width: 80%;
+    
     
 
 
@@ -500,7 +505,6 @@
 
   }
 }
-
 
 
 .cta__container {
@@ -523,6 +527,23 @@
 .cta__icon {
   width:50%;
 
+}
+
+@media (max-width: 800px){
+  .cta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .cta__container-right {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  
+  .cta__left {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* ARTICLES */
@@ -691,6 +712,25 @@ h3 {
   }
 
 
+@media (max-width: 800px){
+  .cta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .cta__right{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+  }
+  
+  .cta__right__button {
+    margin:auto;
+  }
+  
+}
+
+
   /* FOOTER */
   .bottom__greyBar {
     min-height:var(--flow-space-lg);
@@ -730,6 +770,23 @@ h3 {
     margin-top: var(--spacing-base);
     margin-left:auto;
   }
+
+
+@media (max-width: 800px){
+  .footer__grid {
+    grid-template-columns: 1fr;
+    
+  }
+
+  .footer__right {
+
+    grid-column: 1/2;
+    flex-direction: row;
+    margin: var(--flow-space-lg) 0 0 0;
+    justify-content: center;
+  }
+}
+
 
 
 
@@ -823,3 +880,4 @@ a:hover {
 .tag-luftfuktande {
   background-color: var(--clr-air);
 }
+
