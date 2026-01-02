@@ -369,6 +369,31 @@
   }
 }
 
+@media (max-width:800px){
+    .hideOnMobile{
+        display:none;
+    }
+}
+
+@media (max-width:800px){
+    .showOnDesktop{
+        display:flex;
+        
+    }
+}
+
+@media (min-width:801px){
+    .showOnDesktop{
+        display:none;
+    }
+}
+
+@media (min-width:801px){
+    .hideOnDesktop{
+        display:none;
+    }
+}
+
 .header__section-2 {
   padding-top: var(--flow-space-lg);
   padding-bottom: var(--flow-space);
