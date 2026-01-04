@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Planned Planthood</title>
+    
     <script src="javaScript/script.js"></script>
 
+    <link href="style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body class="area-color1">
@@ -40,8 +41,7 @@
                         <p>PLANNED</p>
                         <p>PLANTHOOD</p>
                     </div>
-                </a>
-                
+                </a>  
 
                 <ul class="header__li">
                     <li class="hideOnDesktop">
@@ -92,19 +92,20 @@
     </header>
 
     <main class="content-grid" id="main-content">
-        
-        
+               
         <!-- cta = call to action! -->
         <section class="cta">
             <div class="cta__left">
                 <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
                 <form action="https://formspree.io/f/mjgkrbjl" method="POST" class="cta__mail">
-                    <input class="cta__input" name="email" type="email" autocomplete="email" placeholder="namn@domän.se">
+                    <label class="field" for="email">Email</label>
+                        <input id="email" class="cta__input" name="email" type="email" autocomplete="email" placeholder="namn@domän.se" required>
+                    
                     <button class="cta__button" type="submit">Skicka</button>
                 </form>
             </div>
             <div class="cta__container cta__container-right">
-                <svg class="cta__icon"
+                <svg class="cta__icon" role="img" aria-label="icon"
                     aria-hidden="true"
                     width="199"
                     height="196"
@@ -188,7 +189,6 @@
             </div>
         </section>
         
-
         <section class="fullwidth gallery area-color2">
             <h2>Alla våra växter</h2>
 
@@ -938,7 +938,7 @@
 
         <section class="cta">
             <div class="cta__container cta__container-left">
-                <svg class="cta__icon"
+                <svg class="cta__icon" role="img" aria-label="icon"
                     aria-hidden="true"
                     width="199"
                     height="196"
